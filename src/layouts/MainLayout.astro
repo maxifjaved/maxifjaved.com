@@ -217,6 +217,9 @@ const schemaGraph = {
     {pagePath.startsWith('/blogs/') && ogImage && (
       <link rel="preload" as="image" href={ogImage.replace('https://maxifjaved.com/', '/')} fetchpriority="high" />
     )}
+    {(pagePath.startsWith('/blogs/') || pagePath.startsWith('/projects/')) && (
+      <link rel="preload" as="image" href="/profile-image-56.jpg" imagesrcset="/profile-image-56.jpg 1x, /profile-image-112.jpg 2x" />
+    )}
   </head>
   <body>
     <!-- Skip to main content link for accessibility -->
